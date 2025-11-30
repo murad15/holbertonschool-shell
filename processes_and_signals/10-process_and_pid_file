@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #Create PID file
-touch /var/run/myscript.pid
+sudo mv /var/run/myscript.pid
 echo $$ > /var/run/myscript.pid
 
 # Handle SIGTERM
