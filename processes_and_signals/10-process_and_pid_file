@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+#Create PID file
+echo $$ > /var/run/myscript.pid
+
+# Handle SIGTERM
+trap 'echo "I hate the kill command"' SIGTERM
+
+# Handle SIGINT (Ctrl+C)
+trap 'echo "Y U no love me?!?"' SIGINT
+
+# Handle SIGQUIT and SIGTERM for cleanup & exit
+trap 'rm -f /var/run/myscript.pid; exit' SIGQUIT SIGTERM
+
+# Infinite loop
+while true; do
+    echo "To infinity and beyond indefinitely"
+    sleep 2
+done
