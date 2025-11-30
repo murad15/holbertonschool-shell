@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# 7-highlander: prints "To infinity and beyond indefinitely" every 2 seconds
+# and reacts to SIGTERM
+
+# Function to handle SIGTERM
+trap 'echo "I am invincible!!!"' SIGTERM
+
+# Infinite loop
+while true; do
+    echo "To infinity and beyond indefinitely"
+    sleep 2
+done
