@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Kill 'em with kindness
+pkill "4-to_infinity_and_beyond"
