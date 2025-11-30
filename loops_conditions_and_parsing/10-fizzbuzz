@@ -15,6 +15,7 @@ do
   else
        echo $number
   fi
+  number=$((number+1))
 done
 
 
