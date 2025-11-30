@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Commit 
+for file in *; do
+    # Skip directories or files that somehow match nothing
+    [ -e "$file" ] || continue
+
+    # Print only the part after the first dash, if it exists
+    echo "${file#*-}"
+done
