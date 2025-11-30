@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Comment
+hour=0
+while [ $count -le 12 ]
+do
+    echo "Best School"
+    count=$((count + 1))
+done
+
